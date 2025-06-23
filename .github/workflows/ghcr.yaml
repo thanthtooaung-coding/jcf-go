@@ -1,18 +1,11 @@
-# .github/workflows/docker-publish.yml
-
-# Name of the workflow, which will be displayed in the "Actions" tab on GitHub.
 name: Docker Publish to GHCR
 
-# This workflow runs on any push to the 'main' branch.
 on:
   push:
     branches: [ "main" ]
 
-# Environment variables available to all jobs in this workflow.
 env:
-  # The container registry to use.
   REGISTRY: ghcr.io
-  # The name of the image. We use the GitHub repository name for this.
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
